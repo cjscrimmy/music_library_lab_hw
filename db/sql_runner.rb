@@ -1,4 +1,7 @@
 require('pg')
+require_relative('../models/artist')
+require_relative('../models/album')
+require_relative('../db/sql_runner')
 
 class SqlRunner
     def self.run(sql, values = [])
