@@ -23,9 +23,7 @@ class Artist
     def self.all()
         sql = "SELECT * FROM artists"
         artists_array = SqlRunner.run(sql)
-        return artists_array.map 
+        return artists_array.map { |artist| Artist.new(artist) }
     end
-    # order_hashes = SqlRunner.run(sql)
-    # orders = order_hashes.map { |order| PizzaOrder.new( order ) }
-  
+    
 end
