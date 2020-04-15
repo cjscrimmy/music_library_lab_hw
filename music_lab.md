@@ -22,3 +22,6 @@ Additionally it would be nice to be able to:
 * Find Artists/Albums by their ID
 
 Remember to regularly git commit!
+git add .
+
+git add -A
