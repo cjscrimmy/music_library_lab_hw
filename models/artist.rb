@@ -26,4 +26,12 @@ class Artist
         return artists_array.map { |artist| Artist.new(artist) }
     end
     
+    def albums()
+        sql = "SELECT * FROM albums WHERE artist_id = $1"
+        values = [@id]
+        album_hashes = SqlRunner.run(sql, values)
+        album_objects = album_hashes.map { |album_hash| Album.new(album_hash) }
+        return album_objects
+      end
+
 end
